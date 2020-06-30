@@ -254,9 +254,13 @@ get20s();
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
+
+/* function removeArtist(singer,index) { ;
+  console.log("Removed: "+ [index] + " is :"+singer[index].name);delete singer[index];
+  console.log(artists.length);
+};
+removeArtist(artists,0);
+*/
   
  
 
@@ -272,12 +276,27 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should return the new array with information added"*/
+/*let newartists = {...artists};
+console.log(newartists); */
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
-  }
+let newArtists = {  
+  id: 20,
+  name: "Tommy Gunzz", 
+  years: "1971 - 2020",
+  genre: "Web Design", 
+  nationality: "American Earthling",
+  bio: "Tommy Gunzz, formerly known as Tom Harris III, was born in Baltimore MD. Tom Harris was wisked away from his life to retreat to Alabama with His Mother, Mary Ella Vaughn Harris, Life would never be the Same!"};
+ 
+ function addArtist(myArray, newArtists){
+    myArray.push(newArtists);
+    return newArtists;
+  };
+ addArtist(artists, newArtists);
+ console.log(newArtists);
+ console.log(artists) ;
+  
+    
+  
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
