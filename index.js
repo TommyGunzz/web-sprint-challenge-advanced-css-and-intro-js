@@ -233,16 +233,16 @@ getArtistByIndex(artists,3);
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(){
-    let lived = [];
-    for (let i = 0; i < artists.length; i++) {
-        if (artists[i].years >= "1900" && artists[i].years <= "2000")
-           lived.push(artists[i]);
-          }
+function get20s(data){
+  let lived = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].years >= "1900" && data[i].years <= "2000")
+           lived.push(data[i]);
+          };
           console.log(lived);
         };
-get20s();
-
+    get20s(artists);
+ 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -254,8 +254,9 @@ get20s();
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-
-/* function removeArtist(singer,index) { ;
+//Commented to keep the Object whole
+// My Code works. lol
+/*function removeArtist(singer,index) { ;
   console.log("Removed: "+ [index] + " is :"+singer[index].name);delete singer[index];
   console.log(artists.length);
 };
@@ -293,7 +294,7 @@ let newArtists = {
   };
  addArtist(artists, newArtists);
  console.log(newArtists);
- console.log(artists) ;
+ 
   
     
   
@@ -304,14 +305,17 @@ let newArtists = {
 
 and returns an array with names of artists who painted more than 100 paintings.
 
-For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
+For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"...ect]*/
+// is too small for 3 name return, so i added a argument for nember of paintings.
+function lotsOfArt(artArray,num){
+  for (let i = 0; i <= artArray.length-1; i++) {
+    if (artArray[i].paintings > num){
+    console.log(artArray[i].name);
+  };
+};
+};
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
-}
-
+lotsOfArt(artists,200);
 
 
 // 🎨🎨 STRETCH 🎨🎨//
