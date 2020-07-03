@@ -307,15 +307,27 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"...ect]*/
 // is too small for 3 name return, so i added a argument for nember of paintings.
-function lotsOfArt(artArray,num){
+function lotsOfArt(artArray){
   for (let i = 0; i <= artArray.length-1; i++) {
-    if (artArray[i].paintings > num){
-    console.log(artArray[i].name);
+    if (artArray[i].paintings > 100){
+    console.log("Too many have more than 100 ", artArray[i].name); 
   };
 };
 };
 
-lotsOfArt(artists,200);
+lotsOfArt(artists);
+
+
+
+function lotsOfArt2(artArray,num){
+  for (let i = 0; i <= artArray.length-1; i++) {
+    if (artArray[i].paintings > num){
+    console.log("Less have More Than 300 or any Givin Num: " + artArray[i].name);
+  };
+};
+};
+
+lotsOfArt2(artists,300);
 
 
 // 🎨🎨 STRETCH 🎨🎨//
@@ -357,4 +369,15 @@ function randomize(/* Code here */){
   }
 
 
- /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+ /* STRETCH 3: Use advanced array methods (.map, .reduce, .filter) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
+/* function get20s(data){
+  let lived = [];
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].years >= "1900" && data[i].years <= "2000")
+           lived.push(data[i]);
+          };
+          console.log(lived);
+        };
+    get20s(artists);
+*/
