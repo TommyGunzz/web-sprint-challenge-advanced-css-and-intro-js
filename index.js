@@ -315,11 +315,10 @@ function lotsOfArt(artArray){
   for (let i = 0; i <= artArray.length-1; i++) {
     if (artArray[i].paintings >= 100) {
       newArray.push(artists[i]) 
-      console.log(newArray);
-     ; }
-    
-  };
-};lotsOfArt(artists);
+      console.log(newArray);}
+      };
+    };
+lotsOfArt(artists);
 
 
 // Just for Fun ----------------------------
