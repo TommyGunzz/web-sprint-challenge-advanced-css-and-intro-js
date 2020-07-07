@@ -307,24 +307,29 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"...ect]*/
 // is too small for 3 name return, so i added a argument for nember of paintings.
+
 function lotsOfArt(artArray){
   for (let i = 0; i <= artArray.length-1; i++) {
     if (artArray[i].paintings > 100){
-    console.log("Too many have more than 100 ", artArray[i].name); 
+    console.log("Artists that have more than 100 paintings: ", artArray[i].name); }
+    
   };
 };
-};
+
 
 lotsOfArt(artists);
 
+
+// Just for Fun ----------------------------
 
 
 function lotsOfArt2(artArray,num){
   for (let i = 0; i <= artArray.length-1; i++) {
     if (artArray[i].paintings > num){
     console.log("Less have More Than 300 or any Givin Num: " + artArray[i].name);
-  };
+  } else { console.log("Nope") ; 
 };
+  };
 };
 
 lotsOfArt2(artists,300);
