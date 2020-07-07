@@ -287,7 +287,8 @@ let newArtists = {
   years: "1971 - 2020",
   genre: "Web Design", 
   nationality: "American Earthling",
-  bio: "Tommy Gunzz, formerly known as Tom Harris III, was born in Baltimore MD. Tom Harris was wisked away from his life to retreat to Alabama with His Mother, Mary Ella Vaughn Harris, Life would never be the Same!"};
+  bio: "Tommy Gunzz, formerly known as Tom Harris III, was born in Baltimore MD. Tom Harris was wisked away from his life to retreat to Alabama with His Mother, Mary Ella Vaughn Harris, Life would never be the Same!",
+  paintings: "490"};
  
  function addArtist(myArray, newArtists){
     myArray.push(newArtists);
@@ -310,30 +311,31 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 // is too small for 3 name return, so i added a argument for nember of paintings.
 
 function lotsOfArt(artArray){
+  let newArray=[];
   for (let i = 0; i <= artArray.length-1; i++) {
-    if (artArray[i].paintings > 100){
-    console.log("This Artist has or more than 100 paintings: ", artArray[i].name); }
+    if (artArray[i].paintings >= 100) {
+      newArray.push(artists[i]) 
+      console.log(newArray);
+     ; }
     
   };
-};
-
-// Push to a New Array!!!!!
-lotsOfArt(artists);
+};lotsOfArt(artists);
 
 
 // Just for Fun ----------------------------
 
 
-function lotsOfArt2(artArray,num){
+/* function lotsOfArt2(artArray,num){
   for (let i = 0; i <= artArray.length-1; i++) {
     if (artArray[i].paintings > num){
     console.log("These Artists have " +num + " or more than :" + num + " Paintings!" + artArray[i].name)
   } else { console.log(artArray[i].name+" Nope") ; 
 };
   };
-};
+};lotsOfArt2(artists,300);
+*/
 
-lotsOfArt2(artists,300);
+
 
 
 // 🎨🎨 STRETCH 🎨🎨//
