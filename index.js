@@ -256,13 +256,14 @@ function get20s(data){
 */
 //Commented to keep the Object whole
 // My Code works. lol
-/*function removeArtist(singer,index) { ;
+/* removeArtist(singer,index) { 
   console.log("Removed: "+ [index] + " is :"+singer[index].name);delete singer[index];
   console.log(artists.length);
 };
 removeArtist(artists,0);
-*/
-  
+
+  */
+
  
 
 /**
@@ -303,7 +304,7 @@ let newArtists = {
 
     (1) artists array 
 
-and returns an array with names of artists who painted more than 100 paintings.
+and returns a" NEW "array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"...ect]*/
 // is too small for 3 name return, so i added a argument for nember of paintings.
@@ -311,12 +312,12 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(artArray){
   for (let i = 0; i <= artArray.length-1; i++) {
     if (artArray[i].paintings > 100){
-    console.log("Artists that have more than 100 paintings: ", artArray[i].name); }
+    console.log("This Artist has or more than 100 paintings: ", artArray[i].name); }
     
   };
 };
 
-
+// Push to a New Array!!!!!
 lotsOfArt(artists);
 
 
@@ -326,8 +327,8 @@ lotsOfArt(artists);
 function lotsOfArt2(artArray,num){
   for (let i = 0; i <= artArray.length-1; i++) {
     if (artArray[i].paintings > num){
-    console.log("Less have More Than 300 or any Givin Num: " + artArray[i].name);
-  } else { console.log("Nope") ; 
+    console.log("These Artists have " +num + " or more than :" + num + " Paintings!" + artArray[i].name)
+  } else { console.log(artArray[i].name+" Nope") ; 
 };
   };
 };
